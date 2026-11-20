@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Juego Multijugador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PANTALLA 1: INICIO / LOGIN -->
+    <section id="view-login" class="view active">
+        <div class="card">
+            <h1>Unirse al Juego</h1>
+            <div class="form-group">
+                <label for="player-name">Nombre de jugador</label>
+                <input type="text" id="player-name" placeholder="Escribe tu nombre..." maxlength="15" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="admin-pass">Contraseña (Solo Administrador)</label>
+                <input type="password" id="admin-pass" placeholder="Opcional...">
+            </div>
+            <button id="btn-enter" class="btn btn-primary">Entrar</button>
+            <p id="login-error" class="error-msg"></p>
+        </div>
+    </section>
+
+    <!-- PANTALLA 2: LOBBY -->
+    <section id="view-lobby" class="view">
+        <div class="lobby-container">
+            <div class="players-panel">
+                <h2>Jugadores Conectados (<span id="player-count">0</span>)</h2>
+                <ul id="players-list"></ul>
+            </div>
+
+            <!-- Panel exclusivo para Administrador -->
+            <div id="admin-lobby-controls" class="admin-panel hidden">
+                <h3>Panel de Administrador</h3>
+                <button id="btn-start-game" class="btn btn-green">Iniciar Partida</button>
+                <button id="btn-cancel-game" class="btn btn-red">Cancelar Partida</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PANTALLA 3: JUEGO (IMAGEN PANTALLA COMPLETA) -->
+    <section id="view-game" class="view fullscreen-view">
+        <div class="image-wrapper">
+            <img id="assigned-image" src="" alt="Tu imagen asignada">
+        </div>
+
+        <!-- Botones inferiores exclusivos para Administrador -->
+        <div id="admin-game-controls" class="game-admin-bar hidden">
+            <button id="btn-next-round" class="btn btn-green">Empezar otra ronda</button>
+            <button id="btn-end-session" class="btn btn-red">Concluir sesión</button>
+        </div>
+    </section>
+
+    <!-- Firebase SDK (Compatibilidad sencilla para web estática) -->
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
+    <script src="app.js"></script>
+</body>
+</html>
