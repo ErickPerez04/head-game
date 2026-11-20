@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view {
+    display: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.view.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- LOGIN --- */
+.card {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.card h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #cccccc;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.error-msg {
+    color: #ff5252;
+    font-size: 0.85rem;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* --- BOTONES --- */
+.btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary { background-color: #3b82f6; color: white; }
+.btn-green   { background-color: #10b981; color: white; }
+.btn-red     { background-color: #ef4444; color: white; }
+
+/* --- LOBBY --- */
+.lobby-container {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 100%;
+    max-width: 900px;
+    align-items: flex-start;
+}
+
+.players-panel {
+    flex: 2;
+    background: #1e1e1e;
+    padding: 24px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.players-panel h2 {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+#players-list {
+    list-style: none;
+}
+
+#players-list li {
+    padding: 12px;
+    background: #2a2a2a;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.badge-admin {
+    background: #f59e0b;
+    color: #000;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.admin-panel {
+    flex: 1;
+    background: #1e1e1e;
+    padding: 24px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* --- PANTALLA DE JUEGO --- */
+.fullscreen-view {
+    padding: 0;
+    flex-direction: column;
+    background: #000;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#assigned-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.game-admin-bar {
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(20, 20, 20, 0.95);
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.game-admin-bar .btn {
+    max-width: 250px;
+}
+
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .lobby-container {
+        flex-direction: column;
+    }
+    .game-admin-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .game-admin-bar .btn {
+        max-width: 100%;
+    }
+}
