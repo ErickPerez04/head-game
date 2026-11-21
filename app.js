@@ -2,7 +2,7 @@
 // 1. CONFIGURACIÓN (EDITA ESTA SECCIÓN)
 // ==========================================
 
-// Pega aquí tu configuración gratuita de Firebase Realtime Database
+// Firebase Realtime Database
 const _0x4c1b = [
     "fSJiNjgxNGIwNjNlYmJmNTVlNzlkOTlhOmJldzoyNjc5NTAyMDE3Mzc6MSI6ImRJcHBhIiwiMjY3OTUwMjAxNzM3IjoiZElyZWRuZVNnbmlnYXNzZW0iLCJwcGEuZWdhcm90c2VzYWJlcmlmLjgzNzZhLXpuYWJkZWgiOiJ0ZWtjdUJlZ2Fyb3RzIiwiODM3NmEtem5hYmRlaCI6ImRJdGNlam9ycCIsIm1vYy5vaWVzYWJlcmlmLmJkdHItdGx1YWZlZC04Mzc2YS16bmFiZGVoLy86c3B0dGgiOiJMUlVlc2FiYXRhZCIsIm1vYy5wcGFlc2FiZXJpZi44Mzc2YS16bmFiZGVoIjoibmlhbW9EaHR1YSIsInNneFUxNkNXSFRFSmozWkFwbnVqZ2dOejVpNVNPOXJlRHlTYXpJQSI6InllS2lwYSJ7",
     "atob", "split", "reverse", "join", "parse"
@@ -34,7 +34,7 @@ async function getAvailableImages() {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
-// Contraseña ofuscada (Base64 invertido + desplazamiento)
+// Con (Base64 invertido + desplazamiento)
 const _0x9f2a = ["NjU3NDgzOTIwMW5pbWRh", "split", "reverse", "join", "atob"];
 function verifyAdminKey(input) {
     const decoded = window[_0x9f2a[4]](_0x9f2a[0])[_0x9f2a[1]]("")[_0x9f2a[2]]()[_0x9f2a[3]]("");
