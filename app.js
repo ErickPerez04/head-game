@@ -1,5 +1,5 @@
 // ==========================================
-// 1. CONFIGURACIÓN (EDITA ESTA SECCIÓN)
+// 1. CONFIGURACIÓN
 // ==========================================
 
 // Firebase Realtime Database
@@ -15,7 +15,6 @@ const firebaseConfig = JSON[_0x4c1b[5]](
 
 
 // Lista exacta de archivos dentro de tu carpeta raíz /img/
-// Agrega tantos como jugadores máximos esperes tener
 async function getAvailableImages() {
     try {
         const response = await fetch(`imagenes.json?v=${Date.now()}`);
@@ -29,7 +28,7 @@ async function getAvailableImages() {
 }
 
 // ==========================================
-// 2. INICIALIZACIÓN Y SEGURIDAD OFUSCADA
+// 2. INICIALIZACIÓN
 // ==========================================
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
